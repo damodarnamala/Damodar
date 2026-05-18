@@ -468,6 +468,23 @@ img {
     100% { left: 100%; }
 }
 
+@keyframes borderRotate {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 20px var(--accent-glow), 0 0 60px rgba(99, 102, 241, 0.08); }
+    50% { box-shadow: 0 0 30px var(--accent-glow), 0 0 80px rgba(99, 102, 241, 0.15); }
+}
+
+@keyframes borderGlow {
+    0% { border-color: var(--accent); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent-glow), inset 0 0 20px rgba(99, 102, 241, 0.03); }
+    33% { border-color: var(--accent-light); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px var(--accent-glow), inset 0 0 20px rgba(99, 102, 241, 0.05); }
+    66% { border-color: var(--accent); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 40px var(--accent-glow), inset 0 0 20px rgba(99, 102, 241, 0.03); }
+    100% { border-color: var(--accent); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent-glow), inset 0 0 20px rgba(99, 102, 241, 0.03); }
+}
+
 .hero-content {
     position: relative;
     text-align: center;
@@ -831,7 +848,7 @@ img {
     transform: scale(1);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(99, 102, 241, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(99, 102, 241, 0.05), 0 0 0 1px rgba(99, 102, 241, 0.03);
 }
 
 .expertise-card::after {
@@ -850,9 +867,9 @@ img {
 }
 
 .expertise-card:hover {
-    border-color: var(--border-hover);
+    border-color: var(--accent);
     transform: scale(1.03);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
+    animation: borderGlow 2s ease-in-out infinite;
 }
 
 .expertise-icon {
@@ -1083,7 +1100,7 @@ img {
     transform: scale(1);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(99, 102, 241, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(99, 102, 241, 0.05), 0 0 0 1px rgba(99, 102, 241, 0.03);
 }
 
 .project-card::after {
@@ -1102,9 +1119,9 @@ img {
 }
 
 .project-card:hover {
-    border-color: var(--border-hover);
+    border-color: var(--accent);
     transform: scale(1.03);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
+    animation: borderGlow 2s ease-in-out infinite;
 }
 
 .project-card--featured {
@@ -1459,7 +1476,7 @@ img {
     transform: scale(1);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(99, 102, 241, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(99, 102, 241, 0.05), 0 0 0 1px rgba(99, 102, 241, 0.03);
 }
 
 .credential-card::after {
@@ -1478,9 +1495,9 @@ img {
 }
 
 .credential-card:hover {
-    border-color: var(--border-hover);
+    border-color: var(--accent);
     transform: scale(1.03);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
+    animation: borderGlow 2s ease-in-out infinite;
 }
 
 .credential-type {
@@ -1597,9 +1614,8 @@ img {
 /* --- Resources Section --- */
 .resources-grid {
     display: grid;
-    gap: 32px;
-    max-width: 700px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
 
 .resource-card {
@@ -1611,7 +1627,7 @@ img {
     position: relative;
     overflow: hidden;
     transform: scale(1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(99, 102, 241, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(99, 102, 241, 0.05), 0 0 0 1px rgba(99, 102, 241, 0.03);
 }
 
 .resource-card::before {
@@ -1641,9 +1657,9 @@ img {
 }
 
 .resource-card:hover {
-    border-color: var(--border-hover);
+    border-color: var(--accent);
     transform: scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
+    animation: borderGlow 2s ease-in-out infinite;
 }
 
 .resource-icon {
