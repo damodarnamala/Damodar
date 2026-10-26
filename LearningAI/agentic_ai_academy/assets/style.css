@@ -4,3 +4,11 @@
 .topic-diagram{margin:16px 0;padding:18px;background:#0b1426;border:1px solid #344766;border-radius:14px;overflow-x:auto}.topic-diagram svg{width:100%;max-height:500px;height:auto}.topic-diagram svg text{font-family:Inter,Arial,sans-serif}.topic-diagram svg .node polygon,.topic-diagram svg .node path{stroke:#60a5fa}.topic-diagram svg .edge path{stroke:#94a3b8}.topic-diagram svg .edge polygon{fill:#94a3b8;stroke:#94a3b8}.topic-diagram figcaption{color:#cbd5e1;font-size:.9rem;line-height:1.6;margin-top:10px}.topic-focus{border-left:4px solid #22c55e;background:#142b30;padding:14px 18px;border-radius:8px;margin:15px 0}.topic-pitfall{border-left:4px solid #f59e0b;background:#312718;padding:12px 18px;border-radius:7px;margin:10px 0}
 
 .topic-diagram{margin:16px 0;padding:18px;background:#0b1426;border:1px solid #344766;border-radius:14px;overflow-x:auto}.topic-diagram svg{width:100%;max-height:500px;height:auto}.topic-diagram svg text{font-family:Inter,Arial,sans-serif}.topic-diagram svg .node polygon,.topic-diagram svg .node path{stroke:#60a5fa}.topic-diagram svg .edge path{stroke:#94a3b8}.topic-diagram svg .edge polygon{fill:#94a3b8;stroke:#94a3b8}.topic-diagram figcaption{color:#cbd5e1;font-size:.9rem;line-height:1.6;margin-top:10px}.topic-focus{border-left:4px solid #22c55e;background:#142b30;padding:14px 18px;border-radius:8px;margin:15px 0}.topic-pitfall{border-left:4px solid #f59e0b;background:#312718;padding:12px 18px;border-radius:7px;margin:10px 0}
+
+/* --- Portfolio link + developer credit in header --- */
+.header-tools { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.dev-credit { font-size: 0.72rem; opacity: 0.75; white-space: nowrap; letter-spacing: 0.2px; }
+.dev-credit b { font-weight: 700; opacity: 1; }
+.home-action { font-size: 0.8rem; font-weight: 600; color: inherit; text-decoration: none; padding: 6px 10px; border: 1px solid currentColor; border-radius: 8px; white-space: nowrap; }
+.home-action:hover { opacity: 0.8; }
+@media (max-width: 640px) { .dev-credit { display: none; } }
