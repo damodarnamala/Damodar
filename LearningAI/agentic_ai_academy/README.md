@@ -24,3 +24,9 @@ The course teaches concepts and provides representative runnable code. Some adva
 
 ## Version note
 Prepared October 2026. Always check the latest official SDK API references before production integration. The LangGraph prebuilt `create_react_agent` is deprecated in favor of `langchain.agents.create_agent` for modern high-level agent construction.
+
+## Revised context-specific diagrams (version 2)
+
+Every lesson now has a distinct inline SVG Graphviz-generated UML-style flow diagram with the entities, decisions and feedback edges appropriate to that specific module. Each diagram includes a scenario and accessible descriptive label. Diagrams work offline without Mermaid/CDN dependencies. Shared restaurant metaphors and generic "Mental model: execution flow" diagrams have been removed. Concepts, steps, failure modes, and quizzes are specific to each topic.
+
+**Implementation scope:** Some lessons point to the same executable foundational example to illustrate different responsibilities. Those examples are not claimed to implement the entire diagram.

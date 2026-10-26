@@ -2236,3 +2236,57 @@ img {
         font-size: 0.8rem;
     }
 }
+
+/* --- About card identity (name + role moved from hero) --- */
+.about-identity {
+    margin-bottom: 28px;
+}
+
+.about-identity .hero-title {
+    margin-bottom: 0;
+}
+
+.about-identity .hero-name {
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    letter-spacing: -1px;
+}
+
+.about-identity .hero-role {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+/* --- Summary block at the bottom of the page --- */
+.summary {
+    padding-top: 40px;
+}
+
+/* --- Videos (YouTube playlist embed) --- */
+.videos-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #000;
+}
+
+.video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.videos-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
