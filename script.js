@@ -243,3 +243,17 @@ function initColorToggle() {
         localStorage.setItem('colorScheme', next);
     });
 }
+
+/* --- Video grid: fill titles from YouTube oEmbed (falls back to "Video N") --- */
+(function () {
+    document.querySelectorAll('.video-card[data-video-id]').forEach(function (card) {
+        var url = 'https://www.youtube.com/watch?v=' + card.dataset.videoId;
+        fetch('https://www.youtube.com/oembed?url=' + encodeURIComponent(url) + '&format=json')
+            .then(function (r) { if (!r.ok) throw new Error('oembed'); return r.json(); })
+            .then(function (d) {
+                var t = card.querySelector('.video-title');
+                if (t && d.title) t.textContent = d.title;
+            })
+            .catch(function () { /* keep fallback title */ });
+    });
+})();

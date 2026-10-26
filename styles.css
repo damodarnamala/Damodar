@@ -2290,3 +2290,42 @@ img {
     justify-content: center;
     margin-top: 32px;
 }
+
+/* --- Video grid (YouTube-style previews) --- */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.video-card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.video-thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #000;
+}
+
+.video-title {
+    display: block;
+    padding: 14px 16px 18px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
