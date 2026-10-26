@@ -1,0 +1,9 @@
+# Only install packages for examples you plan to run.
+openai-agents
+langchain
+langchain-openai
+langgraph
+mcp[cli]
+fastapi
+uvicorn
+pytest
