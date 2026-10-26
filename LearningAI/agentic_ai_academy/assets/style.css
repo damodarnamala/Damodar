@@ -12,3 +12,15 @@
 .home-action { font-size: 0.8rem; font-weight: 600; color: inherit; text-decoration: none; padding: 6px 10px; border: 1px solid currentColor; border-radius: 8px; white-space: nowrap; }
 .home-action:hover { opacity: 0.8; }
 @media (max-width: 640px) { .dev-credit { display: none; } }
+
+/* --- Brand block with curator credit (single line) --- */
+.brand-wrap { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.curated { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-size: 0.74rem; line-height: 1; padding: 5px 11px; border-radius: 999px; background: rgba(127, 127, 127, 0.12); align-self: flex-start; }
+.curated-label { text-transform: uppercase; letter-spacing: 0.8px; font-size: 0.62rem; opacity: 0.6; }
+.curated-name { font-weight: 700; }
+.curated-sep { opacity: 0.35; }
+.curated-role { opacity: 0.75; }
+@media (max-width: 640px) { .curated { font-size: 0.68rem; } }
+
+.curated-name { color: inherit; text-decoration: none; }
+.curated-name:hover { text-decoration: underline; }
